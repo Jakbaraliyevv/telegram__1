@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/* Boshlandi manaa */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 29;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1c1c1d;
+  box-shadow: 0px 0.33px 0px 0px #3d3d3f;
+  padding: 8px;
+}
+
+.header__Left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__Left i {
+  font-size: 22px;
+  color: #fff;
+  line-height: 22px;
+  letter-spacing: -0.4000000059604645px;
+}
+.header__Left p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.4000000059604645px;
+  color: #fff;
+}
+
+.header__middle h3 {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.4000000059604645px;
+  color: #fff;
+  padding-bottom: 5px;
+}
+
+.header__middle > p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.05000000074505806px;
+  color: #787878;
+  text-align: center;
+}
+
+/* All kettiyu */
+
+.all__message {
+  width: 100%;
+  min-height: 700px;
+  background-color: #101010;
+}
+/* Bu glavni div hazlashma bu bulan */
+.massage__div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+/* Bu glavni div hazlashma bu bulan */
+.massage__text {
+  max-width: 55%;
+  height: auto;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.massage__textme img {
+  color: #fff;
+  max-width: 20%;
+  align-self: self-end;
+}
+
+.massage__textme {
+  max-width: 55%;
+  height: auto;
+  border: 1px solid #fff;
+  padding: 10px 10px;
+  border-radius: 8px;
+  align-self: flex-end;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.massage__text > p,
+.massage__textme > p {
+  color: #fff;
+}
+
+/* Footer ketti qani */
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 29;
+}
+
+.footer__all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.footer__all > i {
+  font-size: 22px;
+  color: #7f7f7f;
+}
+
+.footer__all {
+  background: #1c1c1d;
+  box-shadow: 0px -0.33px 0px 0px #3d3d3f;
+}
+.form {
+  border: 1px solid red;
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #060606;
+  border: 1px solid #3a3a3c;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.form input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.4000000059604645px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.form button {
+  width: 60px;
+  font-size: 20px;
+  height: 100%;
+  height: auto;
+  background-color: transparent;
+  color: #636366;
+}
+
+
+body{
+  background-color: #000;
+}
+

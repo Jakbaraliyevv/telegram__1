@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/*  */
+
+.all__password > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+  height: 80vh;
+}
+
+.logo__img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.text__pasword {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  border: 1px solid rgb(148, 143, 143);
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgb(182, 108, 108);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.4s;
+  &:hover {
+    background-color: rgb(146, 80, 80);
+  }
+}
+
+.text h2 {
+  font-size: 32px;
+  /* color: #101010; */
+  color: #e0e0e0;
+}
+
+body {
+  background-color: #202020;
+  /* background-color: #e0e0e0; */
+}
