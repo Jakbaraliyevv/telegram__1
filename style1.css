@@ -119,6 +119,13 @@ body {
     text-align: center;
     color: #e0e0e0;
   }
+
+  .logo__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
 }
 
 @media (max-width: 400px) {
