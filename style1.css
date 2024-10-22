@@ -40,13 +40,13 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 20px;
 }
 
 .logo__img {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid red; */
   height: 80vh;
 }
 
@@ -96,11 +96,45 @@ ul {
 
 .text h2 {
   font-size: 32px;
-  /* color: #101010; */
   color: #e0e0e0;
 }
 
 body {
   background-color: #202020;
-  /* background-color: #e0e0e0; */
+}
+
+@media (max-width: 670px) {
+  .all__password > div {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+
+  .text__pasword {
+    margin: 0 auto;
+  }
+
+  .text h2 {
+    font-size: 32px;
+    text-align: center;
+    color: #e0e0e0;
+  }
+}
+
+@media (max-width: 400px) {
+  .text h2 {
+    font-size: 26px;
+    text-align: center;
+    color: #e0e0e0;
+  }
+  .form input {
+    width: 80%;
+    padding: 8px;
+  }
+
+  .form button {
+    width: 80%;
+    padding: 8px;
+    border-radius: 10px;
+  }
 }
