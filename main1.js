@@ -7,7 +7,7 @@ password__btn.addEventListener("click", (e) => {
   e.preventDefault();
 
   if (password__input.value === "ADMIN") {
-    window.location.href = "./index.html"; // Bosh sahifaga o'tkazish
+    window.location.href = "./_index.html"; // Bosh sahifaga o'tkazish
   } else {
     alert("Login yoki parol xato. Qaytadan urinib ko‘ring.");
   }

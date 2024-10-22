@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favocon.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Telegram</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div style="cursor: pointer" class="header__Left">
+          <i class="fa-solid fa-angle-left"></i>
+          <p>Chats</p>
+        </div>
+        <div class="header__middle">
+          <h3>Sarvar Najot Ta'lim</h3>
+          <p>last seen just now</p>
+        </div>
+        <div class="header__right">
+          <img
+            style="width: 50px; border-radius: 100%; cursor: pointer"
+            src="./img/sarvar.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="all">
+      <div class="container">
+        <div class="all__message">
+          <div class="massage__div"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__all">
+          <i class="fa-solid fa-paperclip"></i>
+          <form class="form">
+            <input
+              id="input__text__For__sarvar"
+              type="text"
+              placeholder="Message"
+            />
+            <button id="send__btn__for__sarvar" type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
