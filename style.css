@@ -111,6 +111,9 @@ ul {
   padding: 5px 10px;
   border-radius: 8px;
   align-self: flex-start;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .massage__textme img {
@@ -118,7 +121,6 @@ ul {
   max-width: 20%;
   align-self: self-end;
 }
-
 .massage__textme {
   max-width: 55%;
   height: auto;
@@ -129,6 +131,14 @@ ul {
   display: flex;
   gap: 25px;
   justify-content: space-between;
+  overflow: visible;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.massage__textme p {
+  overflow: hidden;
+  width: 100%;
 }
 
 .massage__text > p,
