@@ -88,7 +88,7 @@ function post__Sarvar() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       text: input__text__For__sarvar.value,
-      ID: 2,
+      ID: 1,
     }),
   })
     .then((data) => data.json())
