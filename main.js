@@ -80,7 +80,7 @@ const send__btn__for__sarvar = document.getElementById(
 
 const massage__div = document.querySelector(".massage__div");
 
-const apii = "https://6716b3593fcb11b265d35fa3.mockapi.io/data";
+const apii = "https://6718988a7fc4c5ff8f4a1f17.mockapi.io/users";
 
 function post__Sarvar() {
   fetch(apii, {
@@ -115,14 +115,14 @@ fetch(apii)
 
 function get__me__text(value) {
   value.forEach((element) => {
-    if (element.ID === 2) {
+    if (element.ID === 1) {
       massage__div.innerHTML += `
       <div class="massage__textme">
               <p>${element.text}</p>
               <img src="./img/check.svg" alt="" />
             </div>
       `;
-    } else if (element.ID === 1) {
+    } else if (element.ID === 2) {
       massage__div.innerHTML += `
       <div class="massage__text">
                <p>${element.text}</p>
