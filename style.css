@@ -100,8 +100,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
+  padding: 12px;
 }
 /* Bu glavni div hazlashma bu bulan */
 .massage__text {
@@ -218,7 +217,7 @@ body {
 .data__time span {
   font-size: 12px;
   color: #fff;
-  }
+}
 
 @media (max-width: 850px) {
   .container {
@@ -280,4 +279,42 @@ body {
     gap: 10px;
     padding: 4px 9px;
   }
+}
+
+/* bottom */
+
+.massage__textme div,
+.massage__text div {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  position: relative;
+  bottom: -6px;
+  color: white;
+  gap: 10px;
+  font-size: 14px;
+}
+.massage__text p,
+.massage__textme p {
+  color: #fff;
+  max-width: 300px;
+}
+
+/* Buscett */
+
+.del,
+.edit {
+  background-color: transparent;
+}
+
+.del i,
+.edit i {
+  font-size: 12px;
+  color: #fff;
+}
+
+.edit_btn_span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

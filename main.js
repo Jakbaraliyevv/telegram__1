@@ -48,20 +48,30 @@ send__btn__for__sarvar.addEventListener("click", (e) => {
 fetch(apii)
   .then((data) => data.json())
   .then((value) => get__me__text(value))
-  .catch((error) => console.log(error.message)); // error.massage emas, error.message
-
+  .catch((error) => console.log(error.message));
 function get__me__text(value) {
   value.forEach((element) => {
     if (element.ID === 1) {
       massage__div.innerHTML += `
-        <div class="massage__textme">
-          <p>${element.text}</p>
-          <div class="data__time">
-            <span>${element.date}</span>
-            <img src="./img/check.svg" alt="" />
-          </div>
-        </div>
-      `;
+             <div class="massage__div">
+  <div class="massage__textme" data-id="${element.id}">
+    <p>${element.text}</p>
+    <div class="data__time">
+      <span>${element.date}</span>
+      <span class="edit_btn_span">
+        <button class="edit">
+          <i class="fa-solid fa-pencil"></i>
+        </button>
+        <button class="del">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </span>
+      <img src="./img/check.svg" alt="" />
+    </div>
+  </div>
+</div>
+
+       `;
     } else if (element.ID === 2) {
       massage__div.innerHTML += `
         <div class="massage__text">
@@ -103,6 +113,8 @@ fileInput.addEventListener("change", (e) => {
         }),
       })
         .then((response) => {
+          location.reload();
+
           return response.json(); // Agar serverdan JSON formatida javob kelsa
         })
         .then((data) => {
@@ -149,3 +161,62 @@ function get__img(value) {
     }
   });
 }
+
+// BU delet tugmasi
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("del") || e.target.closest(".del")) {
+    const massage__textme = e.target.closest(".massage__textme");
+    const massage__textmeID = massage__textme.getAttribute("data-id"); // Ma'lumotning unikal ID sini olish
+
+    if (massage__textmeID) {
+      fetch(
+        `https://6718988a7fc4c5ff8f4a1f17.mockapi.io/users/${massage__textmeID}`,
+        {
+          method: "DELETE",
+        }
+      )
+        .then((response) => {
+          if (response.ok) {
+            massage__textme.remove();
+            console.log("Ma'lumot muvaffaqiyatli o'chirildi");
+          } else {
+            console.error("Ma'lumotni o'chirishda xatolik yuz berdi");
+          }
+        })
+        .catch((error) => {
+          console.error("API bilan bog'lanishda xatolik yuz berdi:", error);
+        });
+    }
+  }
+});
+
+// Bu edit uchun
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("edit") || e.target.closest(".edit")) {
+    const massage__textme = e.target.closest(".massage__textme");
+    const massage__textmeID = massage__textme.getAttribute("data-id"); // Ma'lumotning unikal ID sini olish
+
+    if (massage__textmeID) {
+      fetch(
+        `https://6718988a7fc4c5ff8f4a1f17.mockapi.io/users/${massage__textmeID}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({}),
+        }
+      )
+        .then((response) => {
+          if (response.ok) {
+            massage__textme.remove();
+            console.log("Ma'lumot muvaffaqiyatli o'chirildi");
+          } else {
+            console.error("Ma'lumotni o'chirishda xatolik yuz berdi");
+          }
+        })
+        .catch((error) => {
+          console.error("API bilan bog'lanishda xatolik yuz berdi:", error);
+        });
+    }
+  }
+});
