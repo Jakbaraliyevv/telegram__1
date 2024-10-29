@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 28px 15px;
+  background-color: #1c1c1d;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+/*  Qani kettti */
+
+body {
+  background-color: #000;
+}
+
+.header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__right a i {
+  color: #fff;
+  font-size: 18px;
+}
+
+.all__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.all__main img {
+  width: 90px;
+  border-radius: 100%;
+}
+
+.all__main p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.main__bottom {
+  border-bottom: 1px solid #fff;
+  padding-top: 10px;
+}
+
+/* number */
+.information__top {
+  margin-bottom: 35px;
+}
+
+.information__top h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.information__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.bottom__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+}
+.bottom__right a {
+  display: block;
+}
+
+.bio_text p {
+  margin-top: 30px;
+}
+
+.all__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all__link a {
+  font-size: 17px;
+  color: gray;
+  font-weight: 500;
+}
+
+.bottom__left p,
+.bottom__right a {
+  color: #fff;
+}
+
+.bio_text h4 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.bio_text p {
+  color: #fff;
+}

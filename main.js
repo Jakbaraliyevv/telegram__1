@@ -196,27 +196,22 @@ document.addEventListener("click", function (e) {
   if (e.target.classList.contains("edit") || e.target.closest(".edit")) {
     const massage__textme = e.target.closest(".massage__textme");
     const massage__textmeID = massage__textme.getAttribute("data-id"); // Ma'lumotning unikal ID sini olish
-
-    if (massage__textmeID) {
+    let user_prompt = prompt("Edit");
+    if (user_prompt) {
       fetch(
         `https://6718988a7fc4c5ff8f4a1f17.mockapi.io/users/${massage__textmeID}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({}),
+          body: JSON.stringify({
+            text: user_prompt,
+          }),
         }
       )
-        .then((response) => {
-          if (response.ok) {
-            massage__textme.remove();
-            console.log("Ma'lumot muvaffaqiyatli o'chirildi");
-          } else {
-            console.error("Ma'lumotni o'chirishda xatolik yuz berdi");
-          }
-        })
-        .catch((error) => {
-          console.error("API bilan bog'lanishda xatolik yuz berdi:", error);
-        });
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error.massage));
+    } else {
+      alert("Iltimos ma'lumot kiriting !");
     }
   }
 });
